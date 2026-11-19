@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamPrep AI - All-Subject Exam Portal</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Enforces login before rendering dashboard -->
+    <script src="./auth.js"></script>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header>
+        <a href="./index.html" class="brand">🎓 ExamPrep AI</a>
+        <div class="nav-actions">
+            <span id="userGreeting" class="user-pill">👋 Student</span>
+            <button id="themeToggle" class="btn btn-outline" title="Toggle Dark Mode">🌓</button>
+            <button id="logoutBtn" class="btn btn-danger">Logout</button>
+        </div>
+    </header>
+
+    <!-- Subject Category Bar -->
+    <nav class="subject-bar" id="subjectBar"></nav>
+
+    <!-- Main Dashboard Layout -->
+    <div class="app-container">
+        <aside class="sidebar">
+            <h3 id="sidebarTitle">Chapters</h3>
+            <div id="topicList"></div>
+        </aside>
+
+        <main class="main-content">
+            <div style="margin-bottom: 1.2rem;">
+                <span id="currentSubjectBadge" class="user-pill">Web Development</span>
+                <h1 id="topicHeading" style="margin-top: 8px; font-size: 1.7rem;">Loading...</h1>
+            </div>
+
+            <div class="mode-tabs">
+                <button class="tab-btn active" data-mode="summary">📖 Smart Summary</button>
+                <button class="tab-btn" data-mode="flashcards">🗂️ Flashcards</button>
+                <button class="tab-btn" data-mode="quiz">📝 Practice Quiz</button>
+                <button class="tab-btn" data-mode="planner">📅 Study Plan Generator</button>
+            </div>
+
+            <section id="workspace" class="card"></section>
+        </main>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
